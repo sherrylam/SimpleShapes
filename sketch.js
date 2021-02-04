@@ -42,7 +42,13 @@ function draw() {
   stroke(0);
   fill('#F0F0F0');
   if (mouseIsPressed) {
-    beginShape();
+    hexagon();
+  }
+
+}
+
+function hexagon() {
+	beginShape();
 	vertex(mouseX-7.5, mouseY-13);
 	vertex(mouseX+7.5, mouseY-13);
 	vertex(mouseX+15, mouseY);
@@ -50,8 +56,6 @@ function draw() {
     vertex(mouseX-7.5, mouseY+13);
 	vertex(mouseX-15, mouseY);
 	endShape(CLOSE);
-  }
-
 }
 
 function mousePressed() {
